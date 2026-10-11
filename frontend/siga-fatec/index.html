@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIGA • Portal Acadêmico</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="login-screen" id="loginScreen">
+  <div class="login-visual">
+    <div class="brand"><div class="brand-mark">S</div><div>SIGA <span style="font-weight:400;opacity:.8">| FATEC</span></div></div>
+    <div><h1>Sua vida acadêmica em um só lugar.</h1><p>Acompanhe seu desempenho, organize suas aulas e fique por dentro das informações da sua jornada acadêmica.</p></div>
+    <div class="visual-foot">Portal acadêmico demonstrativo • Projeto independente</div>
+  </div>
+  <div class="login-panel"><form class="login-box" id="loginForm">
+    <div class="eyebrow">Bem-vindo de volta</div><h2>Acessar o portal</h2><p class="sub">Entre para visualizar seu painel acadêmico.</p>
+    <div class="field"><label for="user">Usuário / RA</label><input id="user" autocomplete="username" placeholder="Digite seu usuário ou RA" required value="123456789"></div>
+    <div class="field"><label for="password">Senha</label><input id="password" type="password" autocomplete="current-password" placeholder="Digite sua senha" required value="siga123"></div>
+    <button class="primary full" type="submit">Entrar no SIGA <span aria-hidden="true">→</span></button>
+    <div id="loginError" class="error hidden">Preencha o usuário e a senha para continuar.</div>
+    <div class="demo-hint"><strong>Modo demonstração</strong><br>Use os campos já preenchidos ou digite qualquer usuário e senha para explorar a interface. Nenhum dado é enviado a um servidor.</div>
+  </form></div>
+</section>
+<div class="app hidden" id="app">
+<header class="topbar">
+  <div class="top-left"><button class="icon-btn mobile-menu" id="menuToggle" aria-label="Abrir menu">☰</button><div class="mini-brand"><div class="brand-mark">S</div><span>SIGA</span></div><div class="institution">CENTRO PAULA SOUZA<br><strong>Portal Acadêmico</strong></div></div>
+  <div class="top-actions"><button class="icon-btn" id="notifButton" aria-label="Notificações">♧<span class="dot"></span></button><div class="profile"><div class="avatar">AL</div><div class="user-label"><strong id="topName">Aluno</strong><small>Estudante</small></div></div><button class="icon-btn" id="logoutButton" title="Sair">↪</button></div>
+</header>
+<div class="shell">
+<aside class="sidebar" id="sidebar">
+  <div class="side-label">Menu principal</div>
+  <button class="nav-btn active" data-page="dashboard"><span class="nav-icon">▦</span>Visão geral</button>
+  <button class="nav-btn" data-page="notas"><span class="nav-icon">▤</span>Notas e menções</button>
+  <button class="nav-btn" data-page="frequencia"><span class="nav-icon">◷</span>Frequência</button>
+  <button class="nav-btn" data-page="horarios"><span class="nav-icon">▦</span>Grade horária</button>
+  <button class="nav-btn" data-page="disciplinas"><span class="nav-icon">▧</span>Disciplinas</button>
+  <button class="nav-btn" data-page="calendario"><span class="nav-icon">▣</span>Calendário</button>
+  <button class="nav-btn" data-page="avisos"><span class="nav-icon">♧</span>Avisos</button>
+  <div class="side-label" style="margin-top:18px">Minha conta</div>
+  <button class="nav-btn" data-page="perfil"><span class="nav-icon">◎</span>Meu perfil</button>
+  <div class="sidebar-bottom">SIGA • Protótipo acadêmico<br>Versão demonstrativa 1.0</div>
+</aside>
+<main class="main">
+<section class="page active" id="page-dashboard">
+  <div class="welcome-row"><div><div class="eyebrow">Painel do estudante</div><h1>Olá, <span id="welcomeName">Aluno</span>! 👋</h1><p>Aqui está um resumo da sua vida acadêmica.</p></div><div class="semester">▣ &nbsp; 2º semestre de 2026</div></div>
+  <div class="grid stats">
+    <div class="stat-card"><div class="stat-top">Média geral <span class="stat-icon">▤</span></div><div class="stat-value">8,2</div><div class="stat-note"><span class="positive">▲ 0,4</span> em relação ao semestre anterior</div></div>
+    <div class="stat-card"><div class="stat-top">Frequência geral <span class="stat-icon">◷</span></div><div class="stat-value">92,5%</div><div class="stat-note">Acima do mínimo recomendado</div></div>
+    <div class="stat-card"><div class="stat-top">Disciplinas ativas <span class="stat-icon">▧</span></div><div class="stat-value">6</div><div class="stat-note">Neste semestre letivo</div></div>
+    <div class="stat-card"><div class="stat-top">Próximas avaliações <span class="stat-icon">✎</span></div><div class="stat-value">2</div><div class="stat-note">Uma nesta semana</div></div>
+  </div>
+  <div class="grid content-grid">
+    <div>
+      <div class="panel"><div class="panel-head"><h3>Desempenho por disciplina</h3><button class="text-btn" data-goto="notas">Ver todas →</button></div><div id="dashboardGrades"></div></div>
+      <div class="panel"><div class="panel-head"><h3>Próximas aulas</h3><button class="text-btn" data-goto="horarios">Grade completa →</button></div><div class="table-wrap"><table><thead><tr><th>Disciplina</th><th>Dia / horário</th><th>Sala</th></tr></thead><tbody><tr><td>Banco de Dados</td><td>Hoje · 19:00–20:40</td><td>Lab 04</td></tr><tr><td>Estatística Aplicada</td><td>Hoje · 20:50–22:30</td><td>Sala 12</td></tr><tr><td>Programação em Python</td><td>Amanhã · 19:00–20:40</td><td>Lab 02</td></tr></tbody></table></div></div>
+    </div>
+    <div>
+      <div class="panel"><div class="panel-head"><h3>Avisos recentes</h3><button class="text-btn" data-goto="avisos">Ver todos →</button></div><div id="dashboardNotices"></div></div>
+      <div class="panel"><div class="panel-head"><h3>Outubro 2026</h3><button class="text-btn" data-goto="calendario">Calendário →</button></div><div class="calendar-mini" id="miniCalendar"></div><div class="muted" style="font-size:.78rem;margin-top:15px">● Datas acadêmicas importantes</div></div>
+    </div>
+  </div>
+</section>
+<section class="page" id="page-notas"><h1 class="page-title">Notas e menções</h1><p class="page-desc">Consulte suas notas e acompanhe seu desempenho por disciplina.</p><div class="filters"><select id="gradeFilter"><option value="all">Todas as disciplinas</option><option value="approved">Média ≥ 6,0</option><option value="attention">Média abaixo de 6,0</option></select><input id="gradeSearch" placeholder="Buscar disciplina..."></div><div class="panel"><div class="panel-head"><h3>Boletim acadêmico</h3><span class="pill info">2º semestre · 2026</span></div><div class="table-wrap"><table><thead><tr><th>Disciplina</th><th>Nota 1</th><th>Nota 2</th><th>Média</th><th>Situação</th></tr></thead><tbody id="gradesTable"></tbody></table></div></div><p class="muted" style="font-size:.8rem">As notas exibidas são fictícias e servem apenas para demonstração.</p></section>
+<section class="page" id="page-frequencia"><h1 class="page-title">Frequência</h1><p class="page-desc">Acompanhe suas presenças e faltas em cada disciplina.</p><div class="grid stats"><div class="stat-card"><div class="stat-top">Frequência geral <span class="stat-icon">◷</span></div><div class="stat-value">92,5%</div><div class="stat-note">Consolidado do semestre</div></div><div class="stat-card"><div class="stat-top">Aulas ministradas <span class="stat-icon">▤</span></div><div class="stat-value">160</div><div class="stat-note">Em todas as disciplinas</div></div><div class="stat-card"><div class="stat-top">Presenças <span class="stat-icon">✓</span></div><div class="stat-value">148</div><div class="stat-note">Aulas com presença registrada</div></div><div class="stat-card"><div class="stat-top">Faltas <span class="stat-icon">!</span></div><div class="stat-value">12</div><div class="stat-note">Consulte os detalhes abaixo</div></div></div><div class="panel"><div class="panel-head"><h3>Frequência por disciplina</h3><span class="pill">Mínimo esperado: 75%</span></div><div id="attendanceList"></div></div></section>
+<section class="page" id="page-horarios"><h1 class="page-title">Grade horária</h1><p class="page-desc">Organize sua semana de aulas do semestre atual.</p><div class="panel"><div class="panel-head"><h3>Horários semanais</h3><span class="pill info">Período noturno</span></div><div class="schedule-wrap"><div class="schedule" id="scheduleGrid"></div></div></div><div class="panel"><h3 style="margin-bottom:12px">Legenda</h3><span class="pill info">Aula teórica</span> &nbsp; <span class="pill" style="background:#e5f7f4;color:#176d63">Aula prática / laboratório</span></div></section>
+<section class="page" id="page-disciplinas"><h1 class="page-title">Minhas disciplinas</h1><p class="page-desc">Disciplinas matriculadas no semestre letivo.</p><div class="filters"><input id="subjectSearch" placeholder="Buscar por nome ou professor..."><select id="subjectFilter"><option value="all">Todas as disciplinas</option><option value="lab">Com laboratório</option><option value="theory">Teóricas</option></select></div><div class="grid" id="subjectsGrid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr))"></div></section>
+<section class="page" id="page-calendario"><h1 class="page-title">Calendário acadêmico</h1><p class="page-desc">Datas importantes e compromissos do semestre.</p><div class="panel"><div class="panel-head"><button class="text-btn" id="prevMonth">← Anterior</button><h3 id="calendarTitle">Outubro 2026</h3><button class="text-btn" id="nextMonth">Próximo →</button></div><div class="calendar-mini" id="fullCalendar" style="gap:8px"></div></div><div class="panel"><div class="panel-head"><h3>Próximos eventos</h3></div><div id="eventsList"></div></div></section>
+<section class="page" id="page-avisos"><h1 class="page-title">Avisos e comunicados</h1><p class="page-desc">Fique por dentro das informações da sua unidade.</p><div class="panel"><div class="panel-head"><h3>Todos os comunicados</h3><span class="pill info" id="noticeCount">3 avisos</span></div><div id="allNotices"></div></div></section>
+<section class="page" id="page-perfil"><h1 class="page-title">Meu perfil</h1><p class="page-desc">Confira seus dados de estudante neste protótipo.</p><div class="panel"><div class="profile-card"><div class="profile-large">AL</div><div><h3 id="profileName" style="font-size:1.3rem;margin-bottom:6px">Aluno</h3><div class="muted">Estudante • FATEC</div><span class="pill" style="margin-top:10px">Matrícula ativa (demonstração)</span></div></div><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:25px"><div><div class="muted" style="font-size:.8rem">RA / Usuário</div><strong id="profileRA">123456789</strong></div><div><div class="muted" style="font-size:.8rem">Curso</div><strong>Big Data para Indústrias</strong></div><div><div class="muted" style="font-size:.8rem">Período</div><strong>3º semestre</strong></div><div><div class="muted" style="font-size:.8rem">Turno</div><strong>Noturno</strong></div></div></div><div class="panel"><h3 style="margin-bottom:14px">Preferências</h3><p class="muted" style="font-size:.9rem">Este é um ambiente demonstrativo. Os dados acadêmicos não são enviados nem salvos em um sistema institucional.</p><button class="primary" id="profileLogout">Sair da demonstração</button></div></section>
+<div class="footer">SIGA • Interface acadêmica demonstrativa independente • Dados fictícios</div>
+</main></div></div>
+<script src="script.js"></script>
+</body>
+</html>
