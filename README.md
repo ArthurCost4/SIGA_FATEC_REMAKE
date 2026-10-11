@@ -1,6 +1,10 @@
 # SIGA_FATEC_REMAKE
 Dado o layout do site, esse repositorio demonstra um layout mais intuitivo para os alunos
 
+
+            <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+
 ## TECNOLOGIAS
 ### FRONT-END
     
