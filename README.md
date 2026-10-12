@@ -1,5 +1,5 @@
 # SIGA_FATEC_REMAKE
-Dado o layout do site, esse repositorio demonstra um layout mais intuitivo para os alunos
+Este repositório apresenta uma proposta de interface mais intuitiva e moderna para o SIGA da FATEC, oferecendo uma experiência mais clara para os alunos ao visualizar matrículas, notas, faltas, avisos e demais informações acadêmicas.
 
 
 ## TECNOLOGIAS
@@ -8,6 +8,15 @@ Dado o layout do site, esse repositorio demonstra um layout mais intuitivo para 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+### BACK-END
+![node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+
+### BANCO DE DADOS
+![postgres](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+
+### NUVEM
+![AW](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
           
 
 ## **LAYOUT FRONT-END**
@@ -24,4 +33,40 @@ Foi proposto o PostgreSQL, planejado com usando as tabelas students, users, subj
 
 ## **MODELO DE DESENVOLVIMENTO**
 
-Por conta do siga ser um sistema publico, ou seja, regras ja definidas perante a lei, foi pensado no cascata porem como o projeto em si é uma melhora do atual foi proposto um modelo 'hibrido' de desenvolvimento na onde cada estapa da cascata fosse uma evolução gradual do sistema atual, adcionando funcionalidades e removendo pontos 'problematicos' alem da análise de riscos, implementação de testes e avaliação a cada ciclo.
+Por ser um sistema público com regras definidas por legislação, inicialmente considerou-se o modelo cascata.
+Entretanto, como este projeto é uma evolução do SIGA atual, adotou-se um modelo híbrido, onde cada etapa tradicional (requisitos, análise, implementação, testes) é tratada como um ciclo incremental.
+Isso permite:
+
+. Evolução gradual do sistema
+
+. Correção de pontos problemáticos
+
+. Adição de novas funcionalidades
+
+. Análise contínua de riscos
+
+. Testes e validações a cada entrega
+
+
+## PROJETOS FUTUROS 
+
+Para transformar este remake em um sistema acadêmico completo e robusto, algumas melhorias e tecnologias podem ser incorporadas futuramente:
+
+🔐 Segurança
+
+. Autenticação com JWT
+. Hash seguro de senhas (bcrypt)
+
+⚡ Escalabilidade
+
+. Docker para containerização
+. NGINX como proxy reverso
+
+☁️ Infraestrutura em Nuvem
+
+. AWS RDS para PostgreSQL gerenciado
+. AWS S3 para armazenamento de documentos
+
+## FEITO POR:
+
+📚 Arthur Linhares 
